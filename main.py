@@ -109,7 +109,7 @@ def main():
     # Create the Updater and pass it your bot's token.
     # Make sure to set use_context=True to use the new context based callbacks
     # Post version 12 this will no longer be necessary
-    updater = Updater("707919520:AAE51Xcv4q3P0m7e83urLeTQrwwTG_iR8zo")
+    updater = Updater("TOKEN")
 
     updater.dispatcher.add_handler(CommandHandler('search', start))
     updater.dispatcher.add_handler(MessageHandler(Filters.text, convert_uppercase))
@@ -126,18 +126,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
