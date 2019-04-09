@@ -36,9 +36,6 @@ def help(update, context):
 
 
 def main():
-    # Create the Updater and pass it your bot's token.
-    # Make sure to set use_context=True to use the new context based callbacks
-    # Post version 12 this will no longer be necessary
     updater = Updater("TOKEN")
 
     updater.dispatcher.add_handler(CommandHandler('search', start))
@@ -49,8 +46,6 @@ def main():
     # Start the Bot
     updater.start_polling()
 
-    # Run the bot until the user presses Ctrl-C or the process receives SIGINT,
-    # SIGTERM or SIGABRT
     updater.idle()
 
 
