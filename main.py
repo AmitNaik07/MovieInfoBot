@@ -44,7 +44,7 @@ def help(update, context):
 
 
 def main():
-    updater = Updater("707919520:AAE51Xcv4q3P0m7e83urLeTQrwwTG_iR8zo")
+    updater = Updater("TOKEN")
 
     updater.dispatcher.add_handler(CommandHandler('search', start))
     updater.dispatcher.add_handler(MessageHandler(Filters.text, get_info))
