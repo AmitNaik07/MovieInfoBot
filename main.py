@@ -3,11 +3,13 @@ from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, MessageH
 import requests
 
 def get_info(update, context):
-    print("here")
     chat_id =context.message.chat_id
     text =context.message.text
     url ='http://www.omdbapi.com/?t='+text+'&apikey=9b24e033'
     contents = requests.get(url).json()
+    if(contents['Response']=="False"):
+    	update.send_message(chat_id=chat_id, text="Movie not found. Try again")
+    	return
     title = contents['Title']
     actors =contents['Actors']
     year =contents['Year']
